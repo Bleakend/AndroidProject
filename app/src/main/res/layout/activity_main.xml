@@ -42,9 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/start_quizz_label"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/primary_text_color"
         android:backgroundTint="@color/primary_color"
-        app:rippleColor="#FFFFFF"
+        app:rippleColor="@color/primary_ripple_color"
         android:layout_marginBottom="16dp" />
 
     <Button
@@ -52,7 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/view_history_quizz_label"
-        android:textColor="#111827"
+        android:textColor="@color/secondary_text_color"
+        app:rippleColor="@color/secondary_ripple_color"
         android:backgroundTint="@color/secondary_color" />
 
 </LinearLayout>
