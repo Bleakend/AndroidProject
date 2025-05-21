@@ -65,9 +65,12 @@ public class QuizFragment extends Fragment {
             }
 
             if (activity.question_index == activity.question_list.size()) {
-//                Intent intent = new Intent(activity, QuizResult.class);
-//                intent.putExtra("score", activity.correct_answers);
-//                startActivity(intent);
+                question_number_label.setVisibility(View.INVISIBLE);
+                Fragment resultFragment = QuizResultFragment.newInstance(activity.correct_answers);
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, resultFragment)
+                        .commit();
             } else {
                 // Show next question
                 activity.current_question = activity.question_list.get(activity.question_index);
