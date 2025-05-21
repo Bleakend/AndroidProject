@@ -9,4 +9,9 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="question_counter_init_label">Question 1 of 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next_question_label">Next Question</string>
+    <string name="submit_quiz_label">Submit Quiz</string>
 </resources>
