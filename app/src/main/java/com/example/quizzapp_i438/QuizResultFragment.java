@@ -62,9 +62,8 @@ public class QuizResultFragment extends Fragment {
 
         history_button.setOnClickListener(
                 (v) -> {
-//                    Intent intent = new Intent(getActivity(), MainActivity.class);
-//                    startActivity(intent);
-                    Toast.makeText(getActivity(), "Not implemented", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), QuizHistory.class);
+                    startActivity(intent);
                 }
         );
 

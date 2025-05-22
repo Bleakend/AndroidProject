@@ -17,4 +17,6 @@
     <string name="quiz_result_label">Quiz Result</string>
     <string name="main_menu_button">Main Menu</string>
     <string name="view_history_button">View History</string>
+    <string name="quiz_history_label">Quiz History</string>
+    <string name="clear_quiz_history_label">Clear Quiz History</string>
 </resources>

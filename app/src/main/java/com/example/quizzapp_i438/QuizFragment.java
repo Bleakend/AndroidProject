@@ -39,6 +39,7 @@ public class QuizFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Quiz activity = (Quiz) getActivity();
+        ScoreStorage score_storage = new ScoreStorage(activity);
         
         Button submit_button = view.findViewById(R.id.button_submit_answer);
         RadioGroup radio_group = view.findViewById(R.id.answers_group);
@@ -65,6 +66,7 @@ public class QuizFragment extends Fragment {
             }
 
             if (activity.question_index == activity.question_list.size()) {
+                score_storage.saveQuizScore(activity.correct_answers);
                 question_number_label.setVisibility(View.INVISIBLE);
                 Fragment resultFragment = QuizResultFragment.newInstance(activity.correct_answers);
                 requireActivity().getSupportFragmentManager()
@@ -72,7 +74,7 @@ public class QuizFragment extends Fragment {
                         .replace(R.id.fragment_container, resultFragment)
                         .commit();
             } else {
-                // Show next question
+                //Show next question
                 activity.current_question = activity.question_list.get(activity.question_index);
                 update_question(activity.current_question);
                 radio_group.clearCheck();

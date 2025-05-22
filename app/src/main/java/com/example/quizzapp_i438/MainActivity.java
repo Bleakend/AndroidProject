@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         view_history_button.setOnClickListener(
                 (v) -> {
-                    Toast.makeText(this, "History Button Clicked!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, QuizHistory.class);
+                    startActivity(intent);
                 }
         );
     }
